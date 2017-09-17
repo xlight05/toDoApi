@@ -19,13 +19,11 @@ app.post('/todos', (req, res) => {
         text: req.body.text
     });
 
-
     newTodo.save().then((result) => {
         res.send(result);
     }, (err) => {
         res.send(err);
     })
-
 
 });
 app.listen(3000, () => {
